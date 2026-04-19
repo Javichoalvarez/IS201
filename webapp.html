@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guessing Game | Javier Alvarez</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4efe6;
+            color: #2c2c2c;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            max-width: 600px;
+            margin: 60px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #7a4b2a;
+        }
+
+        p {
+            font-size: 18px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            width: 120px;
+            margin: 10px;
+        }
+
+        button {
+            background-color: #7a4b2a;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            font-size: 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            margin: 8px;
+        }
+
+        button:hover {
+            background-color: #5f391f;
+        }
+
+        .message {
+            font-weight: bold;
+            margin-top: 20px;
+            font-size: 18px;
+        }
+
+        .nav-links {
+            margin-top: 25px;
+        }
+
+        .nav-links a {
+            color: #7a4b2a;
+            text-decoration: none;
+            margin: 0 10px;
+            font-weight: bold;
+        }
+
+        .score-box {
+            margin-top: 20px;
+            font-size: 17px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Number Guessing Game</h1>
+        <p>I am thinking of a number between 1 and 20. Try to guess it.</p>
+
+        <input type="number" id="guessInput" min="1" max="20" placeholder="Enter guess">
+        <br>
+        <button onclick="checkGuess()">Guess</button>
+        <button onclick="restartGame()">Restart</button>
+
+        <div class="message" id="message">Good luck!</div>
+
+        <div class="score-box">
+            <p>Guesses Used: <span id="guessCount">0</span></p>
+        </div>
+
+        <div class="nav-links">
+            <a href="scratch.html">Back to Scratch Page</a>
+            <a href="index.html">Home</a>
+        </div>
+    </div>
+
+    <script>
+        let secretNumber = Math.floor(Math.random() * 20) + 1;
+        let guessCount = 0;
+
+        function checkGuess() {
+            const userGuess = Number(document.getElementById("guessInput").value);
+            const message = document.getElementById("message");
+            const guessCounter = document.getElementById("guessCount");
+
+            if (!userGuess || userGuess < 1 || userGuess > 20) {
+                message.textContent = "Please enter a number between 1 and 20.";
+                return;
+            }
+
+            guessCount++;
+            guessCounter.textContent = guessCount;
+
+            if (userGuess === secretNumber) {
+                message.textContent = "You got it! The number was " + secretNumber + ".";
+            } else if (userGuess < secretNumber) {
+                message.textContent = "Too low. Try again.";
+            } else {
+                message.textContent = "Too high. Try again.";
+            }
+        }
+
+        function restartGame() {
+            secretNumber = Math.floor(Math.random() * 20) + 1;
+            guessCount = 0;
+            document.getElementById("guessCount").textContent = guessCount;
+            document.getElementById("message").textContent = "Game restarted. Try again!";
+            document.getElementById("guessInput").value = "";
+        }
+    </script>
+
+</body>
+</html>

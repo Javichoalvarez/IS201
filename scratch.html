@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scratch Page | Javier Alvarez</title>
+    <link rel="stylesheet" href="scratch.css">
+    <script type="module" src="https://public.tableau.com/javascripts/api/tableau.embedding.3.latest.min.js"></script>
+</head>
+<body id="top">
+
+    <header class="hero">
+        <div class="hero-overlay">
+            <nav class="top-nav">
+                <div class="logo">Javier Alvarez</div>
+                <div class="nav-links">
+                    <a href="index.html">Home</a>
+                    <a href="about.html">About</a>
+                    <a href="resume.html">Resume</a>
+                </div>
+            </nav>
+
+            <div class="hero-content">
+                <p class="eyebrow">Scratch Page</p>
+                <h1>Places and Moments That Matter to Me</h1>
+                <p class="hero-text">
+                    A few places, memories, and things that keep me grounded and motivated.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="#images" class="hero-btn">View Photos</a>
+                    <a href="#video" class="hero-btn ghost-btn">Jump to Video</a>
+                    <a href="#tableau" class="hero-btn ghost-btn">Jump to Tableau</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="page-wrap">
+
+        <section class="card intro-card">
+            <div class="card-header">
+                <p class="section-label">Overview</p>
+                <h2>Favorite Things</h2>
+            </div>
+
+            <div class="intro-grid">
+                <div class="list-side">
+                    <ol>
+                        <li>Places I Enjoy
+                            <ul>
+                                <li>Ecuador</li>
+                                <li>Texas</li>
+                                <li>Colorado</li>
+                            </ul>
+                        </li>
+                        <li>Things That Motivate Me
+                            <ul>
+                                <li>Gospel</li>
+                                <li>Family</li>
+                                <li>Learning new skills</li>
+                            </ul>
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="photo-side">
+                    <img src="assets/img/fam.jpg" alt="Family photo" class="feature-photo">
+                </div>
+            </div>
+        </section>
+
+        <section class="card" id="images">
+            <div class="card-header">
+                <p class="section-label">Gallery</p>
+                <h2>Meaningful Photos</h2>
+            </div>
+
+            <div class="image-grid">
+                <div class="image-card">
+                    <img src="assets/img/templo.jpeg" alt="Temple photo" class="gallery-photo">
+                </div>
+                <div class="image-card">
+                    <img src="assets/img/fam.jpg" alt="Family photo" class="gallery-photo">
+                </div>
+            </div>
+        </section>
+
+        <section class="media-grid">
+            <section class="card media-card" id="video">
+                <div class="card-header">
+                    <p class="section-label">Media</p>
+                    <h2>Norway</h2>
+                </div>
+
+                <div class="media-box">
+                    <iframe
+                        src="https://www.youtube.com/embed/Scxs7L0vhZ4"
+                        title="YouTube video player"
+                        allowfullscreen>
+                    </iframe>
+                </div>
+            </section>
+
+            <section class="card media-card" id="tableau">
+                <div class="card-header">
+                    <p class="section-label">Data</p>
+                    <h2>College Admissions Graph</h2>
+                </div>
+
+                <div class="media-box tableau-box">
+                    <tableau-viz
+                        src="https://public.tableau.com/views/RegionalSampleWorkbook/College?:showVizHome=no"
+                        toolbar="bottom"
+                        hide-tabs
+                        width="100%"
+                        height="520">
+                    </tableau-viz>
+                </div>
+            </section>
+        </section>
+
+        <section class="card app-card" id="app">
+            <div class="card-header center-text">
+                <p class="section-label">Game</p>
+                <h2>Web App</h2>
+                <p class="app-text">I also created a small game for this project.</p>
+            </div>
+
+            <div class="app-button-wrap">
+                <a href="webapp.html" class="app-btn">Open My Web App</a>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <a href="#top">Back to Top</a>
+        <span>|</span>
+        <a href="index.html">Home</a>
+        <span>|</span>
+        <a href="about.html">About</a>
+        <span>|</span>
+        <a href="resume.html">Resume</a>
+    </footer>
+
+</body>
+</html>

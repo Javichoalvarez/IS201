@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About | Javier Alvarez</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+    <link href="css/styles.css" rel="stylesheet" />
+
+    <style>
+        .about-header {
+            background-image:
+                linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+                url('assets/img/templo.jpeg');
+            background-size: cover;
+            background-position: center;
+            min-height: 75vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .about-header-content {
+            color: white;
+            max-width: 800px;
+            padding: 20px;
+        }
+
+        .about-header-content h1 {
+            font-size: 4.2rem;
+            font-weight: 700;
+            margin-bottom: 18px;
+            letter-spacing: 0.5px;
+        }
+
+        .about-header-content p {
+            font-size: 1.25rem;
+            color: rgba(255, 255, 255, 0.92);
+            margin: 0;
+        }
+
+        .about-section {
+            padding: 90px 0;
+            background-color: #faf8f4;
+        }
+
+        .about-card {
+            background-color: white;
+            border-radius: 24px;
+            padding: 50px;
+            box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+        }
+
+        .about-card h2 {
+            font-size: 2.4rem;
+            margin-bottom: 24px;
+            color: #1f1a17;
+        }
+
+        .about-card .lead-text {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: #2d2723;
+            margin-bottom: 24px;
+        }
+
+        .about-card p {
+            font-size: 1.08rem;
+            line-height: 1.9;
+            color: #4a433d;
+            margin-bottom: 18px;
+        }
+
+        .about-image-wrap {
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        .about-image-wrap img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 20px;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+        }
+
+        .about-bottom {
+            margin-top: 35px;
+            text-align: center;
+        }
+
+        .about-bottom a {
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 999px;
+            text-decoration: none;
+            background: linear-gradient(135deg, #5e4534, #3f2d21);
+            color: white;
+            font-size: 1rem;
+            font-weight: 600;
+            box-shadow: 0 10px 24px rgba(63, 45, 33, 0.22);
+            transition: transform 0.2s ease;
+        }
+
+        .about-bottom a:hover {
+            transform: translateY(-2px);
+            color: white;
+        }
+
+        @media (max-width: 768px) {
+            .about-header-content h1 {
+                font-size: 2.8rem;
+            }
+
+            .about-header-content p {
+                font-size: 1.05rem;
+            }
+
+            .about-card {
+                padding: 28px;
+                border-radius: 18px;
+            }
+
+            .about-card h2 {
+                font-size: 2rem;
+            }
+
+            .about-card .lead-text {
+                font-size: 1.12rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
+        <div class="container px-4 px-lg-5">
+            <a class="navbar-brand" href="index.html">Javier Alvarez</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link px-lg-3 py-3 py-lg-4" href="resume.html">Resume</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="about-header">
+        <div class="about-header-content">
+            <h1>About Me</h1>
+            <p>Simple, grounded, and focused on building a strong future.</p>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <div class="container px-4 px-lg-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-xl-9">
+                    <div class="about-card">
+                        <h2>Who I Am</h2>
+
+                        <p class="lead-text">
+                            I’m Javier Alvarez, a business student at Brigham Young University focused on growth, discipline, and building a meaningful future.
+                        </p>
+
+                        <p>
+                            Originally from Ecuador and raised in Austin, Texas, I’ve learned how to adapt, stay consistent, and keep moving forward in any situation.
+                        </p>
+
+                        <p>
+                            I care about becoming someone who creates opportunities for others and makes a real impact through my work.
+                        </p>
+
+                        <div class="about-image-wrap">
+                            <img src="assets/img/fam.jpg" alt="Family photo">
+                        </div>
+
+                        <div class="about-bottom">
+                            <a href="resume.html">View My Resume</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="border-top">
+        <div class="container px-4 px-lg-5 text-center">
+            <div class="small text-muted fst-italic">Copyright &copy; Javier Alvarez 2026</div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+</html>
